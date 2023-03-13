@@ -1,23 +1,16 @@
+import 'package:flutter/widgets.dart';
 
-import 'package:flutter/material.dart';
-class Counter with ChangeNotifier{
+class Timerinfo extends ChangeNotifier {
+  int _remainingTime = 0;
+  int getRemainingTime() { return _remainingTime;}
 
-  int count = 0;
 
-  void incriment (){
-    count++;
-    notifyListeners();
+  updateRemaintime() {
+    _remainingTime++;
+      notifyListeners();
   }
 
-  void decriment (){
-    count--;
-    notifyListeners();
 
-  }
-
-  void reset (){
-    count = 0;
-    notifyListeners();
-  }
 
 }
+
